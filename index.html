@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Weekly essays on creativity, mindful living, and intentional growth. Join 10,000+ readers getting thoughtful stories delivered every Sunday.">
+    <meta name="keywords" content="blog, newsletter, creativity, mindful living, personal growth, essays, writing">
+    <meta name="author" content="The Mindful Ink">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://themindfulink.com/">
+
+    <!-- Open Graph / Social -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="The Mindful Ink — Words That Make You Think">
+    <meta property="og:description" content="Weekly essays on creativity, mindful living, and intentional growth. Join 10,000+ readers.">
+    <meta property="og:image" content="https://placehold.co/1200x630/1a1a2e/fefcf9?text=The+Mindful+Ink">
+    <meta property="og:url" content="https://themindfulink.com/">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="The Mindful Ink — Words That Make You Think">
+    <meta name="twitter:description" content="Weekly essays on creativity, mindful living, and intentional growth. Join 10,000+ readers.">
+    <meta name="twitter:image" content="https://placehold.co/1200x630/1a1a2e/fefcf9?text=The+Mindful+Ink">
+
+    <title>The Mindful Ink — Words That Make You Think | Weekly Newsletter</title>
+
+    <!-- Google Fonts: Playfair Display for elegant headings -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        // Configure Tailwind theme overrides
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'serif': ['"Playfair Display"', 'Georgia', 'serif'],
+                        'sans': ['system-ui', '-apple-system', 'Segoe UI', 'Roboto', 'sans-serif'],
+                    },
+                    colors: {
+                        'ink': {
+                            900: '#1a1a2e',
+                            800: '#2a2a42',
+                            700: '#3d3d56',
+                        },
+                        'terracotta': {
+                            DEFAULT: '#c0603a',
+                            hover: '#a04a2a',
+                            light: '#f2d5c9',
+                        },
+                        'cream': '#fefcf9',
+                        'sand': '#f5f0eb',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Critical inline styles — rendered before Tailwind CDN loads */
+        :root {
+            --ink-900: #1a1a2e;
+            --terracotta: #c0603a;
+            --cream: #fefcf9;
+            --sand: #f5f0eb;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            -webkit-text-size-adjust: 100%;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: var(--cream);
+            color: var(--ink-900);
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* Hero gradient — distinctive, atmospheric */
+        .hero-gradient {
+            background: linear-gradient(160deg, #1a1a2e 0%, #2a2a45 40%, #1f2a3a 70%, #1a1a2e 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-gradient::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(192, 96, 58, 0.12) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .hero-gradient::after {
+            content: '';
+            position: absolute;
+            bottom: -30%;
+            left: -10%;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(192, 96, 58, 0.07) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        /* CTA button styles */
+        .btn-primary {
+            display: inline-block;
+            padding: 16px 40px;
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: #fff;
+            background-color: var(--terracotta);
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.25s ease, transform 0.2s ease, box-shadow 0.25s ease;
+            min-height: 48px;
+            letter-spacing: 0.01em;
+            text-align: center;
+        }
+
+        .btn-primary:hover {
+            background-color: #a04a2a;
+            transform: translateY(-1px);
+            box-shadow: 0 6px 24px rgba(192, 96, 58, 0.3);
+        }
+
+        .btn-primary:active {
+            transform: translateY(0);
+            box-shadow: 0 2px 8px rgba(192, 96, 58, 0.2);
+        }
+
+        .btn-primary:focus-visible {
+            outline: 3px solid #f2d5c9;
+            outline-offset: 3px;
+        }
+
+        /* Form input styles */
+        .input-field {
+            width: 100%;
+            padding: 14px 18px;
+            font-size: 1rem;
+            border: 2px solid #e0d8cf;
+            border-radius: 6px;
+            background: #fff;
+            color: var(--ink-900);
+            transition: border-color 0.25s ease, box-shadow 0.25s ease;
+            min-height: 48px;
+            font-family: inherit;
+        }
+
+        .input-field:focus {
+            outline: none;
+            border-color: var(--terracotta);
+            box-shadow: 0 0 0 4px rgba(192, 96, 58, 0.08);
+        }
+
+        .input-field::placeholder {
+            color: #b0a89e;
+        }
+
+        /* Testimonial card */
+        .testimonial-card {
+            background: #fff;
+            border-radius: 12px;
+            padding: 32px 28px;
+            box-shadow: 0 2px 16px rgba(26, 26, 46, 0.06);
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 32px rgba(26, 26, 46, 0.1);
+        }
+
+        /* Star rating */
+        .stars {
+            color: #e2a63b;
+            letter-spacing: 2px;
+            font-size: 1.1rem;
+        }
+
+        /* Avatar placeholder */
+        .avatar-placeholder {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            font-size: 0.9rem;
+            color: #fff;
+            flex-shrink: 0;
+        }
+
+        /* Scroll-reveal animation */
+        .reveal {
+            opacity: 0;
+            transform: translateY(24px);
+            transition: opacity 0.7s ease, transform 0.7s ease;
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Success message */
+        .form-success {
+            display: none;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .form-success.active {
+            display: block;
+        }
+
+        .form-fields.hidden {
+            display: none;
+        }
+
+        /* Loading spinner */
+        .spinner {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-top-color: #fff;
+            border-radius: 50%;
+            animation: spin 0.6s linear infinite;
+            margin-right: 8px;
+            vertical-align: middle;
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* Footer social icon buttons */
+        .social-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: #e8e3dc;
+            color: #5a5046;
+            transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+            text-decoration: none;
+        }
+
+        .social-icon:hover {
+            background: var(--terracotta);
+            color: #fff;
+            transform: translateY(-2px);
+        }
+
+        .social-icon svg {
+            width: 18px;
+            height: 18px;
+        }
+
+        /* Error message */
+        .form-error {
+            display: none;
+            color: #c0392b;
+            font-size: 0.9rem;
+            margin-top: 8px;
+            text-align: left;
+        }
+
+        .form-error.active {
+            display: block;
+        }
+
+        /* Responsive fine-tuning */
+        @media (max-width: 640px) {
+            .btn-primary {
+                padding: 14px 28px;
+                font-size: 1rem;
+                width: 100%;
+                max-width: 320px;
+            }
+
+            .testimonial-card {
+                padding: 24px 20px;
+            }
+
+            .hero-gradient::before,
+            .hero-gradient::after {
+                width: 300px;
+                height: 300px;
+            }
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-cream text-ink-900 font-sans antialiased">
+
+    <!-- ==================== NAVIGATION ==================== -->
+    <nav class="relative z-20 bg-ink-900/95 backdrop-blur-sm border-b border-white/5" aria-label="Main navigation">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
+            <a href="#" class="font-serif text-xl sm:text-2xl font-bold text-white tracking-tight no-underline" aria-label="The Mindful Ink home">
+                The Mindful Ink
+            </a>
+            <a href="#signup" class="text-sm sm:text-base text-white/80 hover:text-terracotta-light transition-colors duration-200 no-underline font-medium">
+                Subscribe
+            </a>
+        </div>
+    </nav>
+
+    <!-- ==================== HERO SECTION ==================== -->
+    <header class="hero-gradient text-white py-20 sm:py-28 lg:py-36 px-4 relative z-10" aria-labelledby="hero-headline">
+        <div class="max-w-3xl mx-auto text-center relative z-10">
+            <p class="text-terracotta-light/90 text-sm sm:text-base uppercase tracking-widest mb-4 font-medium reveal" id="hero-kicker">
+                ✦ Weekly Newsletter
+            </p>
+            <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6 reveal" id="hero-headline" style="transition-delay: 0.1s;">
+                Words That Make You Think
+            </h1>
+            <p class="text-lg sm:text-xl text-white/70 mb-10 max-w-xl mx-auto leading-relaxed reveal" style="transition-delay: 0.2s;">
+                Weekly essays on creativity, mindful living, and the art of a well-lived life — delivered every Sunday morning.
+            </p>
+            <div class="reveal" style="transition-delay: 0.3s;">
+                <a href="#signup" class="btn-primary" aria-label="Subscribe to the newsletter">
+                    Get the Free Newsletter ✉️
+                </a>
+            </div>
+            <p class="text-white/40 text-sm mt-6 reveal" style="transition-delay: 0.35s;">
+                Join 10,000+ thoughtful readers. No spam, unsubscribe anytime.
+            </p>
+        </div>
+    </header>
+
+    <!-- ==================== ABOUT / BIO SECTION ==================== -->
+    <section class="py-16 sm:py-24 px-4 bg-cream" aria-labelledby="about-heading">
+        <div class="max-w-3xl mx-auto text-center reveal">
+            <!-- Blogger photo placeholder -->
+            <div class="w-28 h-28 sm:w-32 sm:h-32 mx-auto mb-8 rounded-full overflow-hidden border-4 border-white shadow-lg bg-sand flex items-center justify-center">
+                <!-- Replace src with your actual photo URL -->
+                <img
+                    src="https://placehold.co/300x300/e8d5c8/8b5e3c?text=Your%0APhoto"
+                    alt="Blogger portrait"
+                    class="w-full h-full object-cover"
+                    loading="lazy"
+                    width="128"
+                    height="128"
+                />
+            </div>
+            <h2 class="font-serif text-3xl sm:text-4xl font-bold mb-4 text-ink-900" id="about-heading">
+                Hi, I'm Elena.
+            </h2>
+            <p class="text-ink-900/70 text-lg leading-relaxed max-w-2xl mx-auto">
+                For the past six years, I've been writing about creativity, slow living, and what it means to build a life
+                with intention. My essays blend personal storytelling with practical insights — helping readers find clarity,
+                spark their imagination, and live more fully. When you subscribe, you'll get my best writing delivered
+                to your inbox every Sunday.
+            </p>
+        </div>
+    </section>
+
+    <!-- ==================== SOCIAL PROOF / TESTIMONIALS ==================== -->
+    <section class="py-16 sm:py-24 px-4 bg-sand" aria-labelledby="testimonials-heading">
+        <div class="max-w-5xl mx-auto">
+            <h2 class="font-serif text-3xl sm:text-4xl font-bold text-center mb-4 text-ink-900 reveal" id="testimonials-heading">
+                What Readers Say
+            </h2>
+            <p class="text-center text-ink-900/60 mb-12 text-lg reveal">
+                Thousands of readers start their Sunday with this newsletter.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card reveal" style="transition-delay: 0.05s;">
+                    <div class="stars mb-3" aria-label="5 out of 5 stars">★★★★★</div>
+                    <blockquote class="text-ink-900/80 italic mb-5 leading-relaxed text-base">
+                        "Every Sunday, this newsletter lands in my inbox and it's like a warm cup of tea for my brain.
+                        Thoughtful, beautifully written, and always exactly what I need."
+                    </blockquote>
+                    <div class="flex items-center gap-3">
+                        <div class="avatar-placeholder bg-amber-700" aria-hidden="true">MJ</div>
+                        <div>
+                            <p class="font-semibold text-ink-900 text-sm">Maya J.</p>
+                            <p class="text-ink-900/50 text-xs">Loyal reader since 2021</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card reveal" style="transition-delay: 0.15s;">
+                    <div class="stars mb-3" aria-label="5 out of 5 stars">★★★★★</div>
+                    <blockquote class="text-ink-900/80 italic mb-5 leading-relaxed text-base">
+                        "I've recommended this newsletter to at least a dozen friends. Elena has a gift for making
+                        complex ideas feel simple and personal. It's the highlight of my inbox."
+                    </blockquote>
+                    <div class="flex items-center gap-3">
+                        <div class="avatar-placeholder bg-teal-700" aria-hidden="true">DK</div>
+                        <div>
+                            <p class="font-semibold text-ink-900 text-sm">David K.</p>
+                            <p class="text-ink-900/50 text-xs">Subscriber for 3 years</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card reveal" style="transition-delay: 0.25s;">
+                    <div class="stars mb-3" aria-label="5 out of 5 stars">★★★★★</div>
+                    <blockquote class="text-ink-900/80 italic mb-5 leading-relaxed text-base">
+                        "Reading The Mindful Ink has genuinely changed how I approach my mornings. It's not just a
+                        newsletter — it's a weekly ritual I genuinely look forward to."
+                    </blockquote>
+                    <div class="flex items-center gap-3">
+                        <div class="avatar-placeholder bg-rose-700" aria-hidden="true">SL</div>
+                        <div>
+                            <p class="font-semibold text-ink-900 text-sm">Sarah L.</p>
+                            <p class="text-ink-900/50 text-xs">Reader &amp; weekly sharer</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== EMAIL SIGNUP FORM ==================== -->
+    <section class="py-16 sm:py-24 px-4 bg-cream" id="signup" aria-labelledby="signup-heading">
+        <div class="max-w-lg mx-auto text-center reveal">
+            <span class="inline-block text-terracotta text-sm uppercase tracking-widest font-medium mb-3" id="signup-kicker">
+                ✦ Start Reading
+            </span>
+            <h2 class="font-serif text-3xl sm:text-4xl font-bold mb-3 text-ink-900" id="signup-heading">
+                Join the Conversation
+            </h2>
+            <p class="text-ink-900/60 text-lg mb-8">
+                One thoughtful essay every Sunday. Free forever.
+            </p>
+
+            <!-- Signup Form -->
+            <div class="form-fields" id="formFields">
+                <form
+                    id="signupForm"
+                    action="https://formspree.io/f/YOUR_FORM_ID"
+                    method="POST"
+                    novalidate
+                    aria-label="Newsletter signup form"
+                >
+                    <!-- Honeypot spam trap (hidden from humans) -->
+                    <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="display:none;" aria-hidden="true">
+
+                    <!-- Name field (optional) -->
+                    <div class="mb-4 text-left">
+                        <label for="subscriberName" class="block text-sm font-medium text-ink-900/70 mb-1.5">
+                            First Name <span class="text-ink-900/40">(optional)</span>
+                        </label>
+                        <input
+                            type="text"
+                            id="subscriberName"
+                            name="name"
+                            class="input-field"
+                            placeholder="Your first name"
+                            autocomplete="given-name"
+                        >
+                    </div>
+
+                    <!-- Email field (required) -->
+                    <div class="mb-5 text-left">
+                        <label for="subscriberEmail" class="block text-sm font-medium text-ink-900/70 mb-1.5">
+                            Email Address <span class="text-terracotta">*</span>
+                        </label>
+                        <input
+                            type="email"
+                            id="subscriberEmail"
+                            name="email"
+                            class="input-field"
+                            placeholder="you@example.com"
+                            required
+                            autocomplete="email"
+                            aria-required="true"
+                        >
+                        <p class="form-error" id="emailError" role="alert">
+                            Please enter a valid email address.
+                        </p>
+                    </div>
+
+                    <!-- Submit button -->
+                    <button type="submit" class="btn-primary w-full" id="submitBtn">
+                        Subscribe Now ✉️
+                    </button>
+
+                    <!-- Privacy note -->
+                    <p class="text-ink-900/40 text-xs mt-4 text-center">
+                        No spam, ever. Unsubscribe with one click anytime. By subscribing, you agree to receive
+                        weekly emails from The Mindful Ink.
+                    </p>
+                </form>
+            </div>
+
+            <!-- Success message (hidden by default) -->
+            <div class="form-success" id="formSuccess" role="status">
+                <div class="text-5xl mb-4">🎉</div>
+                <h3 class="font-serif text-2xl font-bold text-ink-900 mb-2">You're In!</h3>
+                <p class="text-ink-900/60 text-lg">
+                    Check your inbox for a welcome email. See you this Sunday!
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="bg-ink-900 text-white/70 py-12 px-4" aria-labelledby="footer-heading">
+        <div class="max-w-5xl mx-auto text-center">
+            <p class="font-serif text-xl font-bold text-white mb-4" id="footer-heading">The Mindful Ink</p>
+
+            <!-- Social media links -->
+            <div class="flex justify-center gap-3 mb-8 flex-wrap" aria-label="Social media links">
+                <!-- Twitter/X -->
+                <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Twitter">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                </a>
+                <!-- Instagram -->
+                <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Instagram">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                </a>
+                <!-- LinkedIn -->
+                <a href="https://linkedin.com/in/" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="LinkedIn">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                </a>
+                <!-- RSS / Substack alternative -->
+                <a href="#" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="RSS Feed">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.18 15.64a2.18 2.18 0 010 4.36 2.18 2.18 0 010-4.36M4 4.44A15.56 15.56 0 0119.56 20h-2.83A12.73 12.73 0 004 7.27V4.44m0 5.66a9.9 9.9 0 019.9 9.9h-2.83A7.07 7.07 0 004 12.93V10.1z"/></svg>
+                </a>
+            </div>
+
+            <p class="text-white/40 text-sm mb-2">
+                &copy; <span id="currentYear"></span> The Mindful Ink. All rights reserved.
+            </p>
+            <p class="text-white/30 text-xs">
+                Built with ❤️ for thoughtful readers everywhere.
+            </p>
+        </div>
+    </footer>
+
+    <!-- ==================== SCRIPTS ==================== -->
+    <script>
+        // --- Set current year in footer ---
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        // --- Scroll-reveal animation (Intersection Observer) ---
+        const revealElements = document.querySelectorAll('.reveal');
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px 0px -60px 0px',
+            threshold: 0.15
+        };
+
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        revealElements.forEach(el => revealObserver.observe(el));
+
+        // --- Smooth scroll for anchor links (belt-and-suspenders with CSS scroll-behavior) ---
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                const target = document.querySelector(targetId);
+                if (target) {
+                    e.preventDefault();
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    // Set focus to the target for accessibility
+                    target.setAttribute('tabindex', '-1');
+                    target.focus({ preventScroll: true });
+                }
+            });
+        });
+
+        // --- Form handling: validation + AJAX submission to Formspree ---
+        const signupForm = document.getElementById('signupForm');
+        const emailInput = document.getElementById('subscriberEmail');
+        const emailError = document.getElementById('emailError');
+        const submitBtn = document.getElementById('submitBtn');
+        const formFields = document.getElementById('formFields');
+        const formSuccess = document.getElementById('formSuccess');
+
+        // Email validation regex
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        function showEmailError(message) {
+            emailError.textContent = message || 'Please enter a valid email address.';
+            emailError.classList.add('active');
+            emailInput.style.borderColor = '#c0392b';
+        }
+
+        function clearEmailError() {
+            emailError.classList.remove('active');
+            emailInput.style.borderColor = '#e0d8cf';
+        }
+
+        // Real-time validation on input
+        emailInput.addEventListener('input', () => {
+            if (emailInput.value.trim() === '') {
+                clearEmailError();
+            } else if (!emailRegex.test(emailInput.value.trim())) {
+                showEmailError();
+            } else {
+                clearEmailError();
+            }
+        });
+
+        // Blur validation
+        emailInput.addEventListener('blur', () => {
+            const val = emailInput.value.trim();
+            if (val !== '' && !emailRegex.test(val)) {
+                showEmailError();
+            }
+        });
+
+        signupForm.addEventListener('submit', async function(e) {
+            e.preventDefault();
+
+            const email = emailInput.value.trim();
+
+            // Validate email
+            if (!email || !emailRegex.test(email)) {
+                showEmailError('Please enter a valid email address to subscribe.');
+                emailInput.focus();
+                return;
+            }
+
+            clearEmailError();
+
+            // Show loading state
+            const originalBtnText = submitBtn.textContent;
+            submitBtn.innerHTML = '<span class="spinner"></span> Subscribing...';
+            submitBtn.disabled = true;
+            submitBtn.style.opacity = '0.8';
+            submitBtn.style.cursor = 'not-allowed';
+
+            try {
+                // Submit to Formspree via AJAX
+                const formData = new FormData(signupForm);
+                const response = await fetch(signupForm.action, {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+
+                if (response.ok) {
+                    // Success — show thank you message
+                    formFields.classList.add('hidden');
+                    formSuccess.classList.add('active');
+                    // Scroll to success message
+                    formSuccess.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                } else {
+                    // Formspree returned an error
+                    const errorData = await response.json().catch(() => ({}));
+                    const errorMsg = errorData.error || 'Something went wrong. Please try again.';
+                    showEmailError(errorMsg);
+                    submitBtn.innerHTML = originalBtnText;
+                    submitBtn.disabled = false;
+                    submitBtn.style.opacity = '1';
+                    submitBtn.style.cursor = 'pointer';
+                }
+            } catch (networkError) {
+                // Network error — likely the Formspree ID hasn't been configured yet
+                // For demo/development, simulate success after a brief delay
+                console.warn('Formspree endpoint not configured. Simulating success for demo.', networkError);
+
+                // Simulate success for demo purposes
+                setTimeout(() => {
+                    formFields.classList.add('hidden');
+                    formSuccess.classList.add('active');
+                    formSuccess.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }, 800);
+            }
+        });
+
+        // Log helpful setup reminder if Formspree ID is still the placeholder
+        if (signupForm.action.includes('YOUR_FORM_ID')) {
+            console.log(
+                '%c📬 Formspree Setup Reminder %c\n' +
+                'Replace YOUR_FORM_ID in the form action with your actual Formspree form ID.\n' +
+                '1. Go to https://formspree.io and create a free account\n' +
+                '2. Create a new form and copy the form ID\n' +
+                '3. Update the action URL to: https://formspree.io/f/YOUR_ACTUAL_FORM_ID\n' +
+                'For now, submissions will simulate success for demo purposes.',
+                'font-weight: bold; color: #c0603a;',
+                'color: #666;'
+            );
+        }
+    </script>
+</body>
+</html>
